@@ -26,3 +26,15 @@
       max-width: 90%;
   }
 }
+
+.hero {
+    // ...existing code...
+    &__text {
+        // ...existing code...
+        #contador {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+}
