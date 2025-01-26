@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rd /s /q node_modules && rd /s /q .parcel-cache && rd /s /q dist && del package-lock.json",
+    "deploy": "npm install && npm run build && vercel --prod"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,10 @@
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0",
     "sharp": "^0.33.5",
-    "svgo": "^3.3.2"
+    "svgo": "^3.3.2",
+    "vercel": "^39.3.0"
+  },
+  "dependencies": {
+    "@parcel/watcher": "^2.5.1"
   }
 }
