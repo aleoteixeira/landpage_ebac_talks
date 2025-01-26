@@ -1,7 +1,7 @@
 {
   "name": "ebac_talks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto Ebac Talks",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
@@ -9,17 +9,25 @@
     "clean": "rd /s /q node_modules && rd /s /q .parcel-cache && rd /s /q dist && del package-lock.json",
     "deploy": "npm install && npm run build && vercel --prod"
   },
-  "keywords": [],
-  "author": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ebac",
+    "talks",
+    "eventos"
+  ],
+  "author": "seu-nome",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.0",
-    "parcel": "^2.8.0",
+    "parcel": "latest",
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
-    "vercel": "^39.3.0"
+    "vercel": "^32.3.0"
   },
   "dependencies": {
-    "@parcel/watcher": "^2.5.1"
+    "@swc/core": "^1.10.9",
+    "@swc/helpers": "^0.5.15"
   }
 }
